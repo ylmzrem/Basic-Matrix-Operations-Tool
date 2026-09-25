@@ -1,109 +1,54 @@
 # Basic Matrix Operations Tool
 
-[![Language](https://img.shields.io/badge/language-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)]()
+*[Türkçe versiyonu için aşağıya kaydırın](#temel-matris-işlemleri-aracı)*
 
-*(🇹🇷 Türkçe versiyon için [aşağıya kaydırın](#temel-matris-işlemleri-aracı--türkçe-versiyon).*
+A lightweight and interactive command-line application written in C for performing fundamental matrix operations. 
 
-## About The Project
+## Features
+* **Matrix Addition:** Adds two matrices of the same dimensions.
+* **Matrix Subtraction:** Subtracts one matrix from another of equal dimensions.
+* **Matrix Multiplication:** Multiplies two matrices (requires the number of columns in the first matrix to equal the number of rows in the second).
+* **Matrix Transpose:** Calculates and displays the transpose of a given matrix.
+* **Color-Coded CLI:** Features a colorful and easy-to-read terminal interface using ANSI escape codes.
 
-**Basic Matrix Operations Tool** is an interactive, modular command-line application built with the C programming language. Its primary purpose is to handle essential matrix computations accurately and efficiently, eliminating the risk of manual calculation errors. It is designed for both students and professionals seeking a reliable and lightweight tool for solving matrix-related problems.
+## Limitations
+* The maximum supported matrix size is **10x10**.
 
-### Features
+## How to Run
 
-* **Core Mathematical Operations:** Perform Matrix Addition, Subtraction, Multiplication, and Transposition.
-* **Input Validation & Protection:** Automatically validates matrix dimensions before executing operations (e.g., ensures `columns of Matrix A == rows of Matrix B` for multiplication).
-* **Interactive CLI:** Features a user-friendly, menu-driven interface with color-coded prompts and error messages for better readability.
-* **Efficient Data Structures:** Utilizes fixed-size 2D arrays (up to 10x10) to efficiently store and manipulate matrix data in memory.
-
-## Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-You need a C compiler installed on your system (e.g., GCC, Clang). 
-* **Windows:** MinGW or WSL is recommended.
-* **macOS:** Install Xcode Command Line Tools (`xcode-select --install`).
-* **Linux:** Usually pre-installed (If not, run `sudo apt install build-essential`).
-
-### Installation & Compilation
-
-1. Clone the repository or download the source code files.
-2. Open your terminal or command prompt and navigate to the project directory.
-3. Compile the C file using GCC:
+1. **Compile the code** using a C compiler (like GCC):
    ```bash
-   gcc BasicMatrixOperationsToolProject.c -o matrix_tool
+   gcc BasicMatrixOperationsToolProject.c -o matrix_operations
    ```
-
-## Usage
-
-1. Run the compiled executable:
-   * **Linux / macOS:** `./matrix_tool`
-   * **Windows:** `matrix_tool.exe`
-2. You will be greeted by the main menu. Enter the number corresponding to your desired operation (1-5).
-3. Follow the on-screen prompts to input the dimensions (Rows & Columns) and the elements of your matrices.
-4. The program will compute and display the final matrix, or return a clear error message if the dimensions are incompatible.
-
-## Roadmap
-
-Future upgrades and advanced computations planned for this project include:
-- [ ] Support for calculating the Determinant of square matrices.
-- [ ] Calculating the Inverse of square matrices.
-- [ ] Computing Eigenvalues.
-- [ ] Dynamic memory allocation to support matrices larger than 10x10.
-- [ ] Integration with external mathematical libraries for advanced numerical methods.
+2. **Run the executable:**
+   * On Linux/macOS: `./matrix_operations`
+   * On Windows: `matrix_operations.exe`
+3. Follow the on-screen menu to input your matrix dimensions and elements.
 
 ---
 <br>
 
-# Temel Matris İşlemleri Aracı (Türkçe Versiyon)
+# Temel Matris İşlemleri Aracı
 
-## Proje Hakkında
+Temel matris işlemlerini gerçekleştirmek için C programlama diliyle geliştirilmiş hafif ve etkileşimli bir komut satırı uygulamasıdır.
 
-**Temel Matris İşlemleri Aracı**, C programlama dili ile geliştirilmiş etkileşimli ve modüler bir komut satırı uygulamasıdır. Temel amacı, matris hesaplamalarını doğru ve verimli bir şekilde gerçekleştirerek manuel hesaplama hatalarını ortadan kaldırmaktır. Matris problemleriyle uğraşan öğrenciler ve profesyoneller için güvenilir ve hafif bir araç olarak tasarlanmıştır.
+## Özellikler
+* **Matris Toplama:** Aynı boyutlara sahip iki matrisi toplar.
+* **Matris Çıkarma:** Aynı boyutlara sahip iki matrisin farkını alır.
+* **Matris Çarpma:** İki matrisi çarpar (birinci matrisin sütun sayısının, ikinci matrisin satır sayısına eşit olması gerekir).
+* **Matris Transpozu:** Verilen bir matrisin devriğini (transpozunu) hesaplar ve ekrana yazdırır.
+* **Renkli Arayüz (CLI):** Daha iyi bir kullanıcı deneyimi için renkli ve okunması kolay bir terminal arayüzüne sahiptir.
 
-### Özellikler
+## Sınırlandırmalar
+* Desteklenen maksimum matris boyutu **10x10**'dur.
 
-* **Temel Matematiksel İşlemler:** Matris Toplama, Çıkarma, Çarpma ve Transpoz (Devrik) alma işlemlerini destekler.
-* **Giriş Doğrulama (Input Validation):** İşlemleri gerçekleştirmeden önce matris boyutlarını otomatik olarak kontrol eder. (Örn: Çarpma işlemi için birinci matrisin sütun sayısının ikinci matrisin satır sayısına eşit olmasını şart koşar).
-* **Etkileşimli Arayüz (CLI):** Okunabilirliği artırmak için renk kodlu uyarılar ve hata mesajları içeren, kullanıcı dostu, menü tabanlı bir arayüze sahiptir.
-* **Verimli Veri Yapıları:** Matris verilerini bellekte saklamak ve işlemek için sabit boyutlu (maksimum 10x10) 2 boyutlu diziler (2D arrays) kullanır.
+## Nasıl Çalıştırılır
 
-## Başlarken
-
-Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin.
-
-### Gereksinimler
-
-Sisteminizde bir C derleyicisi (GCC, Clang vb.) kurulu olmalıdır.
-* **Windows:** MinGW veya WSL tavsiye edilir.
-* **macOS:** Xcode Command Line Tools kurulumu gereklidir (`xcode-select --install`).
-* **Linux:** Genellikle yüklü gelir. (Yüklü değilse `sudo apt install build-essential` komutunu kullanabilirsiniz).
-
-### Kurulum ve Derleme
-
-1. Projeyi bilgisayarınıza indirin.
-2. Terminal veya komut satırını açarak proje dizinine gidin.
-3. GCC kullanarak C dosyasını derleyin:
+1. **Kodu derleyin** (örneğin GCC kullanarak):
    ```bash
-   gcc BasicMatrixOperationsToolProject.c -o matrix_tool
+   gcc BasicMatrixOperationsToolProject.c -o matrix_operations
    ```
-
-## Kullanım
-
-1. Derlenmiş programı çalıştırın:
-   * **Linux / macOS:** `./matrix_tool`
-   * **Windows:** `matrix_tool.exe`
-2. Ana menü üzerinden yapmak istediğiniz işlemin numarasını (1-5) girin.
-3. Ekrana gelen yönlendirmeleri takip ederek matrislerin boyutlarını (Satır ve Sütun) ve elemanlarını girin.
-4. Program sonucu hesaplayarak ekranda gösterecek veya girilen boyutlar işlem için uygun değilse anlaşılır bir hata mesajı verecektir.
-
-## Yol Haritası (Gelecek Planları)
-
-Projenin ilerleyen sürümlerinde eklenmesi planlanan özellikler ve ileri düzey hesaplamalar:
-- [ ] Kare matrisler için Determinant hesaplama desteği.
-- [ ] Kare matrislerin Tersini (Inverse) alma.
-- [ ] Özdeğerleri (Eigenvalues) hesaplama.
-- [ ] 10x10'dan daha büyük matrisleri desteklemek için dinamik bellek yönetimi (Dynamic Memory Allocation).
-- [ ] İleri düzey sayısal yöntemler için harici matematik kütüphanelerinin entegrasyonu.
+2. **Programı çalıştırın:**
+   * Linux/macOS'ta: `./matrix_operations`
+   * Windows'ta: `matrix_operations.exe`
+3. Matris boyutlarınızı ve elemanlarınızı girmek için ekrandaki menüyü takip edin.
